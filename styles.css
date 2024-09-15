@@ -1,0 +1,237 @@
+/* Reset */
+/* Reset box-sizing to 'border-box' for all elements and their pseudo-elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Set default font and color for the body */
+  body {
+    font-family: 'Be Vietnam Pro', sans-serif; /* Ensures consistent font across the website */
+    font-size: 0.875rem; /* Sets a small, manageable font size */
+    color: #232C50; /* Provides a default text color */
+    margin: 0; /* Removes default margin from the body */
+    min-height: 100vh; /* Ensures the body spans the full viewport height */
+  }
+  
+  /* Remove margin and padding from all elements */
+  * {
+    margin: 0; /* Ensures no unwanted spaces */
+    padding: 0; /* Removes default padding */
+  }
+  
+  /* Set default font-size and line-height for accessibility and consistency */
+  html {
+    font-size: 100%; /* Ensures that the root font-size remains consistent (default 16px) */
+    line-height: 1.5; /* Improves readability with good vertical spacing */
+  }
+  
+  /* Ensure that media elements fit within their parent containers */
+  img, picture, video, canvas, svg {
+    display: block; /* Prevents images from having extra space below them */
+    max-width: 100%; /* Makes media responsive, adjusting to container size */
+  }
+  
+  /* Remove default styles from form elements */
+  button, input, textarea, select {
+    border: none; /* Removes default borders */
+    background: none; /* Resets background */
+    font: inherit; /* Inherits font styling from parent element */
+    box-sizing: inherit; /* Ensures elements use the global box-sizing rule */
+  }
+  
+  /* Highlight focus states for better accessibility */
+  button:focus, input:focus, textarea:focus, select:focus, a:focus {
+    outline: 2px solid #4D90FE; /* Adds a visible outline on focus */
+    outline-offset: 2px; /* Adds space between element and outline */
+  }
+  
+  /* Remove default list styles from ul and ol */
+  ul, ol {
+    list-style: none; /* Removes default bullet points or numbering */
+  }
+  
+  /* Reset anchor styling for consistent link behavior */
+  a {
+    text-decoration: none; /* Removes default underline */
+    color: inherit; /* Inherits text color from parent, often body color */
+  }
+  
+
+  /* UI CODE  */
+
+  nav {
+   background-color: #f8f9fa;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+  }
+  nav img {
+    width: 100%;
+    max-width: 150px;
+    margin-left: auto;
+  }
+  .top-navigation {
+    display: flex;
+  }
+  .top-navigation a {
+    margin-right: 2rem;
+    font-size: 1.5rem;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-content {
+    position: absolute;
+    display: none;
+    color: #99999;
+    background-color: #f9f9f9;
+    text-wrap: nowrap;
+    padding: 1rem;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .dropdown:hover {
+    outline: 2px solid #4D90FE; 
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadein 0.5s ease-in-out;
+  }
+  .dropdown-content li:hover {
+    background-color: #ddd;
+  }
+/* HERO SECTION */
+.Hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* chil absolute to make it on top */
+}
+
+.Hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cursor-left,
+.cursor-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Adjust the width as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.cursor-left {
+  left: 0;
+  margin-left: 10px;
+  background-image: url(./images/prev.png);
+}
+
+.cursor-right {
+  right: 0;
+  margin-right: 20px;
+  background-image: url(./images/next.png);
+}
+
+/* Six Elements */
+
+.Six-Elements {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.Elements {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Element li img {
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+/* DropDOwn arrow */
+  
+.dropdown {
+  padding-right: 16px;
+  &::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #FFA500;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
