@@ -312,3 +312,21 @@
     transform: translateY(-50%);
   }
 }
+
+
+/* Footer */
+
+
+footer {
+  background-color: #404440;
+  padding: 2rem;
+  color: #fff;
+}
+.bottom-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 0.5px solid #f1f1f1;
+  margin: 20px;
+}
